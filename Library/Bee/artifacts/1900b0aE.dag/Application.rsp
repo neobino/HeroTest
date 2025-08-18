@@ -401,8 +401,12 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.48f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.48f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.48f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
-"Assets/_source/Scripts/Application/Models/Hero/HeroSnapshot.cs"
-"Assets/_source/Scripts/Application/Ports/Hero/IHeroRepository.cs"
+"Assets/_source/Scripts/Application/Models/HeroUpgrade/HeroSnapshot.cs"
+"Assets/_source/Scripts/Application/Models/HeroUpgrade/HeroUpgradePlan.cs"
+"Assets/_source/Scripts/Application/Ports/HeroUpgrade/IHeroRepository.cs"
+"Assets/_source/Scripts/Application/Ports/HeroUpgrade/IHeroUpgrade.cs"
+"Assets/_source/Scripts/Application/UseCases/HeroUpgrade/Interface/IUpgradeHeroUseCase.cs"
+"Assets/_source/Scripts/Application/UseCases/HeroUpgrade/UpgradeHeroUseCase.cs"
 -langversion:9.0
 /deterministic
 /optimize+
