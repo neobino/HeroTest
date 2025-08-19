@@ -13,8 +13,8 @@ namespace Presentation.Presenters.HeroUpgrade
 {
     public sealed class HeroPanelPresenter : IStartable, IDisposable
     {
-        private readonly HeroView _view;
         private readonly HeroViewModel _vm;
+        private readonly IHeroUpgradeView _view;
         private readonly IUpgradeHeroUseCase _upgrade;
         private readonly IGetHeroSnapshotUseCase _get;
 
@@ -25,13 +25,13 @@ namespace Presentation.Presenters.HeroUpgrade
         private readonly float _throttleFirst = 0.3f;
 
         public HeroPanelPresenter(
-            HeroView view,
             HeroViewModel vm,
+            IHeroUpgradeView view,
             IUpgradeHeroUseCase upgrade,
             IGetHeroSnapshotUseCase get)
         {
-            _view = view;
             _vm = vm;
+            _view = view;
             _upgrade = upgrade;
             _get = get;
         }
@@ -82,9 +82,9 @@ namespace Presentation.Presenters.HeroUpgrade
             _view.SetUpgradeInteractable(false);
             try
             {
-                HeroSnapshot s = await _upgrade.ExecuteAsync()
+                UpgradeResult result = await _upgrade.ExecuteAsync()
                     .AttachExternalCancellation(_cts.Token);
-                _vm.Apply(s);
+                _vm.Apply(result.Snapshot);
             }
             catch (OperationCanceledException)
             {

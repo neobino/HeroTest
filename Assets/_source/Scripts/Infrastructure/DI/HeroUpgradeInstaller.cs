@@ -1,9 +1,9 @@
 ﻿using Application.Ports.HeroUpgrade;
 using Application.UseCases.HeroUpgrade;
-using Domain.Models.HeroUpgrade;
 using Infrastructure.Config.Hero;
 using Infrastructure.Persistence.HeroUpgrade;
 using Infrastructure.Policies.HeroUpgrade;
+using MessagePipe;
 using Presentation.Presenters.HeroUpgrade;
 using Presentation.ViewModels.HeroUpgrade;
 using Presentation.Views.HeroUpgrade;
@@ -15,30 +15,28 @@ namespace Infrastructure.DI
 {
     public class HeroUpgradeInstaller : LifetimeScope
     {
-        [Header("Configs")] 
-        [SerializeField] 
-        private HeroInitialStatsSO _initialStats;
+        [Header("Configs")] [SerializeField] private HeroInitialStatsSO _initialStats;
 
-        [SerializeField] 
-        private HeroUpgradeSO _upgradeRecipe;
+        [SerializeField] private HeroUpgradeSO _upgradeRecipe;
 
-        [Header("Views)]")] 
-        [SerializeField] 
-        private HeroView _heroView;
+        [Header("Views)]")] [SerializeField] private HeroView _heroView;
 
         protected override void Configure(IContainerBuilder builder)
         {
+            var options = builder.RegisterMessagePipe();
+            builder.RegisterBuildCallback(c => GlobalMessagePipe.SetProvider(c.AsServiceProvider()));
+
             RegisterConfig(builder);
             RegisterPorts(builder);
             RegisterUseCase(builder);
             RegisterViewAndPresenter(builder);
         }
-        
+
 
         private void RegisterViewAndPresenter(IContainerBuilder builder)
         {
             builder.Register<HeroViewModel>(Lifetime.Singleton);
-            builder.RegisterComponent(_heroView);
+            builder.RegisterComponent(_heroView).As<IHeroUpgradeView>();
             builder.RegisterEntryPoint<HeroPanelPresenter>();
         }
 

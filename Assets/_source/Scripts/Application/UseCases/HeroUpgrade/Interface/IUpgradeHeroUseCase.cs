@@ -5,6 +5,6 @@ namespace Application.UseCases.HeroUpgrade
 {
     public interface IUpgradeHeroUseCase
     {
-        UniTask<HeroSnapshot> ExecuteAsync();
+        UniTask<UpgradeResult> ExecuteAsync();
     }
 }
