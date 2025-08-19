@@ -406,7 +406,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.48f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/_source/Scripts/Infrastructure/Config/HeroUpgrade/HeroInitialStatsSO.cs"
 "Assets/_source/Scripts/Infrastructure/Config/HeroUpgrade/HeroUpgradeSO.cs"
-"Assets/_source/Scripts/Infrastructure/DI/ProjectContextHeroUpgrade.cs"
+"Assets/_source/Scripts/Infrastructure/DI/HeroUpgradeInstaller.cs"
 "Assets/_source/Scripts/Infrastructure/Persistence/HeroUpgrade/InMemoryHeroRepository.cs"
 "Assets/_source/Scripts/Infrastructure/Polices/HeroUpgrade/UpgradePolicyFromSO.cs"
 -langversion:9.0

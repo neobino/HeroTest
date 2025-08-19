@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afca3667e25846949fb85c512cde6842, type: 3}
   m_Name: HeroInitialStats
   m_EditorClassIdentifier: 
-  _name: Hero
+  _name: Saitama
   _level: 1
-  _strength: 0
+  _strength: 50

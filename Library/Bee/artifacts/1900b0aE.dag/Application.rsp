@@ -405,6 +405,8 @@
 "Assets/_source/Scripts/Application/Models/HeroUpgrade/HeroUpgradePlan.cs"
 "Assets/_source/Scripts/Application/Ports/HeroUpgrade/IHeroRepository.cs"
 "Assets/_source/Scripts/Application/Ports/HeroUpgrade/IHeroUpgrade.cs"
+"Assets/_source/Scripts/Application/UseCases/HeroUpgrade/GetHeroSnapshotUseCase.cs"
+"Assets/_source/Scripts/Application/UseCases/HeroUpgrade/Interface/IGetHeroSnapshotUseCase.cs"
 "Assets/_source/Scripts/Application/UseCases/HeroUpgrade/Interface/IUpgradeHeroUseCase.cs"
 "Assets/_source/Scripts/Application/UseCases/HeroUpgrade/UpgradeHeroUseCase.cs"
 -langversion:9.0

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HeroUpgradeRecipe
   m_EditorClassIdentifier: 
   _levelDelta: 1
-  _strengthDelta: 5
+  _strengthDelta: 25
