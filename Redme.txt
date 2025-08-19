@@ -1,0 +1,18 @@
+# HeroTest
+Тест улучшения героя архитектурно
+
+## Стек
+Clean Architecture
+UI Toolkit
+UniRx (R3)
+UniTask
+MessagePipe
+VContainer
+TriInspector
+Assembly Definitions
+
+##
+Улучшения героя на Clean Architecture
+с использованием Vcontainer, R3, MessagePipe
+ps (если коротко)
+
