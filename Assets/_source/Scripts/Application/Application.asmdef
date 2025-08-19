@@ -1,0 +1,4 @@
+﻿{
+  "name": "Application",
+  "references":[ "GUID:6a3dfa2f88c24c6dbd8244eb7a531d1d" , "MessagePipe"]
+}

@@ -1,0 +1,4 @@
+﻿{
+    "name": "Infrastructure",
+    "references":[ "GUID:12fe67a43d89493d81d6563e5784e9de", "GUID:6a3dfa2f88c24c6dbd8244eb7a531d1d", "VContainer", "VContainer.Unity", "GUID:2c84846a3a0d45eca1570debe7c474ea", "MessagePipe.VContainer", "MessagePipe"]
+}

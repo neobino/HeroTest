@@ -1,0 +1,9 @@
+﻿{
+  "name": "Tests.EditMode",
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "references": [
+    "Domain"
+  ],
+  "testAssemblies": true
+}
